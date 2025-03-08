@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #000;
+}
+.header img {
+    width: 50px;
+    height: 50px;
+}
+.nav {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    padding: 10px;
+}
+ button {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background: none;
+    cursor: pointer;
+ }
+.main {
+    padding: 20px;
+    padding-top: 30px;
+}
+.main text{
+    text-align: left;
+    margin-bottom: 20px;
+}
+.main h1 {
+    font-size: 24px;
+}
+.main p {
+    font-size: 16px;
+}
+.main img {
+    width: 100%;
+    max-width: 1366px;
+    height: auto;
+    padding-left: 55px;
+}
+.facilitation {
+    padding: 20px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.facilitation h2 {
+    font-size: 20px;
+    text-align: center;
+}
+.facilitation .facilities {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.facilitation .facility {
+    text-align: center;
+}
+.facilitation .facility img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+.message-us {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.message-us form {
+    width: 60%;
+}
+.message-us form div {
+    margin-bottom: 10px;
+}
+.message-us form label {
+    display: inline-block;
+    width: 100px;
+}
+.message-us form input, .message-us form textarea {
+    width: calc(100% - 110px);
+    padding: 5px;
+    border: 1px solid #000;
+}
+.message-us form input[type="radio"] {
+    width: auto;
+}
+.message-us form button {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background: none;
+    cursor: pointer;
+}
+.message-us .info {
+    width: 35%;
+    border: 1px solid #000;
+    padding: 10px;
+}
+.footer {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #000;
+}
+@media (max-width: 768px) {
+    .message-us {
+        flex-direction: column;
+    }
+    .message-us form, .message-us .info {
+        width: 100%;
+    }
+}
