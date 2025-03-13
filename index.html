@@ -5,58 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raihan Project</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <script src="js/script.js"></script> 
 </head>
 <body>
+    <!--buat navbar-->
     <div class="header">
         <img src="content/logo sekolah.png" alt="Logo" height="50">
-        <nav class="nav">
-            <button>Home</button>
-            <button>Our Profile</button>
-            <button>Achievement</button>
-            <button>Message Us</button>
-    </div>
-    
-    </nav>
+         <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Profile</a></li>
+                <li><a href="#message">Message Us</a></li>
+            </ul>
+         </nav>
+    </div> 
+    <!-- buat main konten -->
     <div class="main">
         <div class="text">
-        <h1>Hi Raihan,Welcome to website</h1>
-        <p>ini adalah website latihan pertama</p>
-         <img src="content/sekolah.jpg" >
+            <h1>Hi <span id="name">kamu</span> selamat datang</h1>
+            <button id="tombol" class="tombol">ganti nama</button>
+            <p>ini adalah website latihan pertama</p>
         </div>
- <hr />
-        <h1>Our Facilitation</h1>
-        <div> 
-            <img src="">
-            <img src="">
-            <img src="">
+    </div>
+
+    <div class="slideshow-container">
+        <img class="slide" src="content/sekolah1.jpg" alt="Banner 1">
+        <img class="slide" src="content/sekolah2.jpg" alt="Banner 2">
+        <img class="slide" src="content/sekolah3.png" alt="Banner 3">
+    </div>
+    
+    <div class="fasilitas">
+        <h2>Our Facilitation</h2>
+        <div class="border">
+            <div class="foto">
+                <img src="content/logo sekolah.png" width="100px" height="100px">
+                <p>Lapangan</p>
+            </div>
+            <div class="foto">
+                <img src="content/logo sekolah.png" width="100px" height="100px">
+                <p>Perpustakaan</p>
+            </div>
+            <div class="foto">
+                <img src="content/logo sekolah.png" width="100px" height="100px">
+                <p>kelas</p>
+            </div>
         </div>
-<hr />        
-        <h1>Message Us</h1>
-        <form name="form1" method="POST" action="" id="latar">
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Nama</th> 
-                        <td>:</td>
-                        <td> <input type="text" name="nama"></td>
-                    </tr>
-                    <tr>
-                        <th>Tanggal Lahir</th> 
-                        <td>:</td>
-                        <td> <input type="date" name="kelas"></td>
-                    </tr>
-                    <th>Jenis Kelamin</th> 
-                    <td>:</td>
-                    <td> <input type="radio" name="JK" value="L">Laki-Laki
-                         <input type="radio" name="JK" value="P">Perempuan
-                    </td>
-                    <tr>
-                        <th>Pesan</th> 
-                        <td>:</td>
-                        <td> <input type="text" name="nama"></td>
-                    </tr>
-                </tbody>
-            </table>
+    </div>
+
+
+
+         <section id="message" class="message-us">
+            <h2>Message Us</h2>
+            <form id="messageForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="letName" required>
+                
+                <label for="birthdate">Tanggal Lahir:</label>
+                <input type="date" id="birthdate" required>
+                
+                <div class="radio-group">
+                    <label>Jenis Kelamin :</label>
+                    <label><input type="radio" name="gender" value="Laki-Laki"> Laki-Laki</label>
+                    <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+                </div>                
+                
+                <label for="messageText">Pesan:</label>
+                <textarea id="messageText" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+            
+            <div class="message-output" id="messageOutput"></div>
+        </section>>
+    <div class="footer">
+        Created by Raihan
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,18 +1,42 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+ }
+ 
+ nav ul li {
+    display: inline;
+ }
+ 
+ nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius:5px;
+    background-color: aquamarine;
+ }
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     border-bottom: 1px solid #000;
+    background-color: green;
 }
 .header img {
     width: 50px;
     height: 50px;
+    border: 1 px solid black;
+    border-radius: 50px;
 }
 .nav {
     display: flex;
@@ -20,99 +44,102 @@ body {
     justify-content: flex-end;
     padding: 10px;
 }
- button {
+ .tombol {
     padding: 10px 20px;
     border: 1px solid #000;
     background: none;
     cursor: pointer;
+    color: black;
  }
 .main {
-    padding: 20px;
+    padding: 50px;
     padding-top: 30px;
+    text-align: center;
 }
-.main text{
+.main text {
     text-align: left;
     margin-bottom: 20px;
 }
 .main h1 {
-    font-size: 24px;
+    font-size: 40px;
 }
-.main p {
-    font-size: 16px;
-}
-.main img {
-    width: 100%;
-    max-width: 1366px;
-    height: auto;
-    padding-left: 55px;
-}
-.facilitation {
+
+.fasilitas {
     padding: 20px;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
 }
-.facilitation h2 {
+
+.fasilitas h2 {
     font-size: 20px;
-    text-align: center;
+    margin-bottom: 20px;
 }
-.facilitation .facilities {
+
+.border {
     display: flex;
     justify-content: space-around;
-    padding: 20px 0;
+    padding-bottom: 50px;
 }
-.facilitation .facility {
-    text-align: center;
-}
-.facilitation .facility img {
+
+.foto img {
     width: 100px;
     height: 100px;
     border: 1px solid #000;
-    border-radius: 50%;
+    border-radius: 100px;
 }
+
+.foto {
+    text-align: center;
+}
+
 .message-us {
     padding: 20px;
+}
+
+form {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
 }
-.message-us form {
-    width: 60%;
-}
-.message-us form div {
-    margin-bottom: 10px;
-}
-.message-us form label {
-    display: inline-block;
-    width: 100px;
-}
-.message-us form input, .message-us form textarea {
-    width: calc(100% - 110px);
-    padding: 5px;
-    border: 1px solid #000;
-}
-.message-us form input[type="radio"] {
-    width: auto;
-}
-.message-us form button {
-    padding: 10px 20px;
-    border: 1px solid #000;
-    background: none;
+
+button {
+    padding: 10px;
+    background: #000;
+    color: #ffffff;
+    border: none;
     cursor: pointer;
 }
-.message-us .info {
-    width: 35%;
-    border: 1px solid #000;
+
+.message-output {
+    margin-top: 20px;
     padding: 10px;
+    border: 1px solid black;
 }
+
 .footer {
     text-align: center;
-    padding: 10px;
+    padding: 30px;
     border-top: 1px solid #000;
 }
-@media (max-width: 768px) {
-    .message-us {
-        flex-direction: column;
-    }
-    .message-us form, .message-us .info {
-        width: 100%;
-    }
+
+.slideshow-container {
+    width: 100%;
+    height: 300px; /* Sesuaikan ukuran */
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
 }
