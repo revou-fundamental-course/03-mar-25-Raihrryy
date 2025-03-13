@@ -1,13 +1,34 @@
-
-    function replaceName() {
-    let name = prompt("siapa nama anda?","");
-    document.getElementById("name").innerHTML = name ;
+// GANTI NAMA USER
+function replaceName() {
+    let name = prompt("Siapa nama anda?", "");
+    document.getElementById("name").innerHTML = name;
 }
 
 document.getElementById('tombol').addEventListener("click", function() {
-    replaceName() ;
-})
+    replaceName();
+});
 
+// MENAMPILKAN INFO FASILITAS SAAT DIKLIK
+document.addEventListener("DOMContentLoaded", function () {
+    let fasilitasImages = document.querySelectorAll(".fasilitas-img");
+
+    fasilitasImages.forEach(img => {
+        img.addEventListener("click", function () {
+
+            document.querySelectorAll(".info-text").forEach(text => {
+                if (text !== this.parentElement.querySelector(".info-text")) {
+                    text.textContent = "";
+                }
+            });
+
+            let infoText = this.parentElement.querySelector(".info-text");
+            
+            infoText.textContent = infoText.textContent === "" ? this.getAttribute("data-info") : "";
+        });
+    });
+});
+
+// MENAMPILKAN PESAN DI MESSAGE US
 document.getElementById("messageForm").addEventListener("submit", function(event) {
     event.preventDefault();
  
@@ -24,12 +45,11 @@ document.getElementById("messageForm").addEventListener("submit", function(event
     `;
  
     document.getElementById("messageOutput").innerHTML = output;
- 
-    // Clear form after submission
-    document.getElementById("messageForm").reset();
- });
+    document.getElementById("messageForm").reset(); 
+});
 
- document.addEventListener("DOMContentLoaded", function () {
+// SLIDESHOW OTOMATIS
+document.addEventListener("DOMContentLoaded", function () {
     let slides = document.querySelectorAll(".slide");
     let currentIndex = 0;
 
@@ -45,7 +65,6 @@ document.getElementById("messageForm").addEventListener("submit", function(event
         showSlide(currentIndex);
     }
 
-    showSlide(currentIndex); // Tampilkan slide pertama
-
-    setInterval(nextSlide, 3000); // Ganti slide setiap 3 detik
+    showSlide(currentIndex);
+    setInterval(nextSlide, 3000); 
 });

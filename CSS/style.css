@@ -1,134 +1,98 @@
+/* -------------------- GENERAL STYLE -------------------- */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #4F959D; 
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    color: #205781; 
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    padding: 0;
- }
- 
- nav ul li {
-    display: inline;
- }
- 
- nav ul li a {
-    text-decoration: none;
-    color: black;
-    padding: 5px 10px;
-    border: 1px solid black;
-    border-radius:5px;
-    background-color: aquamarine;
- }
-
+/* -------------------- NAVBAR -------------------- */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    border-bottom: 1px solid #000;
-    background-color: green;
+    padding: 15px 20px;
+    background-color: #205781; 
+    border-bottom: 4px solid #4F959D; 
 }
+
 .header img {
     width: 50px;
     height: 50px;
-    border: 1 px solid black;
-    border-radius: 50px;
+    border-radius: 50%;
 }
-.nav {
+
+.nav ul {
+    list-style: none;
     display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-    padding: 10px;
+    gap: 15px;
+    padding: 0;
 }
- .tombol {
-    padding: 10px 20px;
-    border: 1px solid #000;
-    background: none;
-    cursor: pointer;
-    color: black;
- }
+
+.nav ul li {
+    display: inline;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #98D2C0; 
+    transition: background 0.3s;
+}
+
+.nav ul li a:hover {
+    background-color: #4F959D;
+}
+
+/* -------------------- MAIN CONTENT -------------------- */
 .main {
-    padding: 50px;
-    padding-top: 30px;
+    background-color: #4F959D; 
+    padding: 50px 20px;
     text-align: center;
-}
-.main text {
-    text-align: left;
-    margin-bottom: 20px;
-}
-.main h1 {
-    font-size: 40px;
+    border-bottom: 5px solid #205781; 
 }
 
-.fasilitas {
-    padding: 20px;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-}
-
-.fasilitas h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.border {
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 50px;
-}
-
-.foto img {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #000;
-    border-radius: 100px;
-}
-
-.foto {
-    text-align: center;
-}
-
-.message-us {
-    padding: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
+.text {
+    max-width: 600px;
     margin: auto;
 }
 
-button {
-    padding: 10px;
-    background: #000;
-    color: #ffffff;
+.main h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #205781; 
+}
+
+.tombol {
+    padding: 12px 24px;
+    background: #205781; 
+    color: white;
+    font-size: 16px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
-.message-output {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid black;
+.tombol:hover {
+    background: #4F959D;
 }
 
-.footer {
-    text-align: center;
-    padding: 30px;
-    border-top: 1px solid #000;
-}
-
+/* -------------------- SLIDESHOW -------------------- */
 .slideshow-container {
-    width: 100%;
-    height: 300px; /* Sesuaikan ukuran */
+    width: 90%; 
+    max-width: 1200px; 
+    height: 500px; 
     overflow: hidden;
     position: relative;
+    margin: 30px auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 }
 
 .slide {
@@ -142,4 +106,295 @@ button {
 
 .slide.active {
     opacity: 1;
+}
+
+
+/* -------------------- OUR FACILITATION -------------------- */
+.fasilitas {
+    background-color: #F6F8D5; 
+    padding: 50px 20px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #205781; 
+}
+
+.fasilitas-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    gap: 50px;
+}
+
+.info-sekolah {
+    max-width: 400px;
+    text-align: center;
+    background: #98D2C0; 
+    padding: 15px;
+    border-radius: 10px;
+    color: #205781;
+}
+
+.info-sekolah img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.fasilitas-list {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    flex-wrap: wrap; 
+}
+
+.foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+.foto img {
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid #205781; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease-in-out;
+}
+
+.foto img:hover {
+    transform: scale(1.1); 
+}
+
+.info-text {
+    font-size: 14px;
+    font-style: italic;
+    color: #205781;
+    margin-top: 5px;
+}
+
+/* -------------------- MESSAGE US -------------------- */
+.message-us {
+    background-color: #98D2C0;
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 5px solid #205781;
+}
+
+.message-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #205781;
+    margin-bottom: 20px;
+}
+
+/* CONTAINER FORM & OUTPUT MESSAGE */
+.message-container {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    max-width: 1000px; 
+    margin: 0 auto;
+    gap: 40px; 
+    flex-wrap: wrap;
+}
+
+/* FORM STYLE */
+form {
+    flex: 1;
+    width: 100%;
+    max-width: 500px; 
+    padding: 25px;
+    background: #F6F8D5;
+    border-radius: 10px;
+    border: 2px solid #205781;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* STYLE LABEL */
+form label {
+    font-weight: bold;
+    color: #205781;
+    display: block; 
+    margin-bottom: 5px;
+}
+
+/* INPUT & TEXTAREA STYLE */
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4F959D;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+    color: #205781;
+    transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #205781;
+    outline: none;
+    box-shadow: 0 0 5px rgba(32, 87, 129, 0.5);
+}
+
+/* RADIO BUTTON STYLE */
+.radio-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* BUTTON STYLE */
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #205781;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #154360;
+}
+
+/* OUTPUT MESSAGE STYLE */
+.message-output {
+    flex: 1;
+    max-width: 450px;
+    min-height: 350px;
+    padding: 20px;
+    font-size: 18px;
+    border: 2px solid #4F959D;
+    background: #F6F8D5;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* -------------------- PEMBATAS (DIVIDER) -------------------- */
+.section-divider {
+    width: 80%;
+    max-width: 1000px;
+    height: 1px; 
+    background: linear-gradient(to right, #205781, transparent, #205781);
+    border-radius: 1px;
+    margin: 1px auto; 
+}
+
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #205781; 
+    color: white;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* -------------------- RESPONSIVE DESIGN -------------------- */
+
+/* Tablet (Lebar max 1024px) */
+@media screen and (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .fasilitas-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .message-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form,
+    .message-output {
+        width: 80%;
+    }
+}
+
+/* HP (Lebar max 768px) */
+@media screen and (max-width: 768px) {
+    .slideshow-container {
+        height: 250px;
+    }
+
+    .slide {
+        height: 250px;
+    }
+
+    .main h1 {
+        font-size: 28px;
+    }
+
+    .tombol {
+        width: 100%;
+    }
+
+    .fasilitas-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .message-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    form,
+    .message-output {
+        width: 90%;
+    }
+}
+
+/* Layar Kecil (Lebar max 480px) */
+@media screen and (max-width: 480px) {
+    .main h1 {
+        font-size: 24px;
+    }
+
+    .tombol {
+        font-size: 14px;
+    }
+
+    .banner-container {
+        height: 200px;
+    }
+
+    .slide {
+        height: 200px;
+    }
+
+    .message-container {
+        width: 100%;
+    }
+
+    form,
+    .message-output {
+        width: 100%;
+    }
 }
