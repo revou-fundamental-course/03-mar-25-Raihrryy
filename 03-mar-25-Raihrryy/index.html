@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raihan Project</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="header">
+        <img src="content/logo sekolah.png" alt="Logo" height="50">
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#fasilitas">About Us</a></li>
+                <li><a href="#message">Message Us</a></li>
+            </ul>
+        </nav>
+    </div> 
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+        <div class="text">
+            <h1>Hi <span id="name">kamu</span>, selamat datang di website</h1>
+            <button id="tombol" class="tombol">Ganti Nama</button>
+        </div>
+        <div class="slideshow-container">
+            <img class="slide" src="content/banner1.webp" alt="Banner 1">
+            <img class="slide" src="content/banner2.webp" alt="Banner 2">
+            <img class="slide" src="content/banner 3.webp" alt="Banner 3">
+        </div>    
+    </div>
+
+    <!-- ABOUT US / FASILITAS -->
+    <div id="fasilitas" class="fasilitas">
+        <h2>About Us</h2>
+        <div class="fasilitas-container">
+            
+            <!-- Informasi Sekolah -->
+            <div class="info-sekolah">
+                <h3>Tentang Sekolah</h3>
+                <p>Sekolah kami memiliki berbagai fasilitas yang menunjang kegiatan belajar mengajar.</p>
+                <img src="content/anu.jpg" width="300px" height="200px" alt="Gambar Sekolah">
+            </div>
+    
+            <!-- Fasilitas Sekolah -->
+            <div class="fasilitas-list">
+                <div class="foto">
+                    <img src="content/lapamgan.jpg" width="100px" height="100px" class="fasilitas-img" data-info="Lapangan luas untuk kegiatan olahraga.">
+                    <p>Lapangan</p>
+                    <p class="info-text"></p>
+                </div>
+                <div class="foto">
+                    <img src="content/perpus.jpg" width="100px" height="100px" class="fasilitas-img" data-info="Perpustakaan dengan koleksi buku lengkap.">
+                    <p>Perpustakaan</p>
+                    <p class="info-text"></p>
+                </div>
+                <div class="foto">
+                    <img src="content/kelas.jpg" width="100px" height="100px" class="fasilitas-img" data-info="Ruang kelas yang nyaman dan kondusif.">
+                    <p>Kelas</p>
+                    <p class="info-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MESSAGE US -->
+    <section id="message" class="message-us">
+        <h2 class="message-title">Message Us</h2>
+        <div class="message-container">
+            <form id="messageForm">
+                <label for="letName">Nama:</label>
+                <input type="text" id="letName" required>
+            
+                <label for="birthdate">Tanggal Lahir:</label>
+                <input type="date" id="birthdate" required>
+            
+                <label>Jenis Kelamin:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="Laki-Laki"> Laki-Laki</label>
+                    <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+                </div>                
+            
+                <label for="messageText">Pesan:</label>
+                <textarea id="messageText" required></textarea>
+            
+                <button type="submit">Submit</button>
+            </form>
+    
+            <div class="message-output" id="messageOutput"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        Created by Raihan
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
